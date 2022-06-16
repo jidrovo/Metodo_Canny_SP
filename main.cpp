@@ -7,7 +7,7 @@
 using namespace cv;
 using namespace std;
 
-
+//1. Primer Paso
 // Raw gradient. No denoising
 void gradient(const Mat&Ic, Mat& G2)
 {
@@ -32,7 +32,7 @@ void gradient(const Mat&Ic, Mat& G2)
     }
 
 }
-
+//2. Step
 // Gradient (and derivatives), Sobel denoising
 void sobel(const Mat&Ic, Mat& Ix, Mat& Iy, Mat& G2)
 {
@@ -62,7 +62,7 @@ void sobel(const Mat&Ic, Mat& Ix, Mat& Iy, Mat& G2)
         }
     }
 }
-
+//3. Step
 // Gradient thresholding, default = do not denoise
 Mat threshold(const Mat& Ic, float s, bool denoise = false)
 {
